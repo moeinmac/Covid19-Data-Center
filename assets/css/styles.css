@@ -136,3 +136,21 @@ section .content-container{
     padding: .8em 1.1em;
     border-bottom: 1px solid var(--gColor);
 }
+
+@media only screen 
+   and (min-width : 768px) {
+    .search-sec .search{
+        width: 25em;
+    }
+    section{flex-direction: row;}
+    .title{font-size: 2rem;}
+    .country-card{font-size: 1rem;}
+}
+
+@media only screen 
+   and (min-width : 1000px) {
+    .search-sec .search{
+        width: 25em;
+    }
+    .title{font-size: 3rem;}
+}
