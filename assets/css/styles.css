@@ -1,0 +1,53 @@
+@import url('fonts.css');
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: none; outline: none;
+}
+:root{
+    --dColor : #060506;
+    --fColor : #F5F5F5;
+    --pColor : #0EB9FF;
+    --gColor : #C6C6C6;
+    --br : .3em
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 1.5em 2.5em;
+    font-family: 'Comfortaa';
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    background-color: var(--fColor);
+    border: 1px solid var(--gColor);
+    border-radius: var(--br);
+    position: absolute;
+    top: 1.1em;
+}
+.search-sec{
+    padding:.5em 1em;
+}
+.search-sec .search{
+    font-size: 1.2rem;
+    width: 20em;
+    background-color: transparent;
+}
+.search-sec i{
+    cursor: pointer;
+    color: var(--pColor);
+}
+.toogle-mood{
+    margin: 0 0 0 auto;
+}
+.toogle-mood i{
+    font-size: 1.5rem;
+    padding: .3em;
+    background-color: #FFCC33;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
