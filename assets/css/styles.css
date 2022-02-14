@@ -75,6 +75,7 @@ section .content-container{
 .title{
     font-size: 2rem;
 }
+.all-cases{color: var(--pColor);}
 .img-container{
     padding: 0 .5em;
 }
