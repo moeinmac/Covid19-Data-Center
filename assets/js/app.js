@@ -63,7 +63,7 @@ function createCountryCard(country) {
     search.value = ''
     contentContainer.innerHTML =   `
         <div class="country-card">       
-            <header style=''>
+            <header style='${caseFrequency(country.confirmed,country.population)}'>
                 <img src="https://flagcdn.com/48x36/${country.abbreviation.toLowerCase()}.png" alt="">
                 <div class="card-title">
                     <h3>${country.country}</h3>
@@ -79,5 +79,11 @@ function createCountryCard(country) {
             </main>
     </div>
 `
-// caseFrequency(country.confirmed,country.population)
+caseFrequency(country.confirmed,country.population)
+}
+
+//* Add Red Color to Header
+function caseFrequency(confirmed,population) {
+    const frequency = eval((confirmed/population).toFixed(2)) + 0.2
+    return `background : rgba(255,0,0,${frequency})`
 }
