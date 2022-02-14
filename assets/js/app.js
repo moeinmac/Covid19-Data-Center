@@ -2,6 +2,7 @@
 const allCase = document.querySelector('.all-cases');
 const search = document.querySelector('.search');
 const resultContainer = document.querySelector('.result-container')
+const contentContainer = document.querySelector('.content-container')
 
 //? GET Data From Api
 document.addEventListener('DOMContentLoaded',getAllCases)
@@ -51,6 +52,32 @@ function searchCases(AllData) {
          <p>${country.country}</p>
        `
        resultContainer.appendChild(countryElement)
+      countryElement.addEventListener('click',()=>{createCountryCard(country)})
      })
- }
- 
+}
+
+//todo CountryCard Render
+
+function createCountryCard(country) {
+    resultContainer.innerHTML = ''
+    search.value = ''
+    contentContainer.innerHTML =   `
+        <div class="country-card">       
+            <header style=''>
+                <img src="https://flagcdn.com/48x36/${country.abbreviation.toLowerCase()}.png" alt="">
+                <div class="card-title">
+                    <h3>${country.country}</h3>
+                    <p>${country.capital_city}</p>
+                </div>
+            </header>
+            <main>
+                <p>confirmed : ${numeral(country.confirmed).format('0,0')}</p>
+                <p>deaths : ${numeral(country.deaths).format('0,0')}</p>
+                <p>population : ${numeral(country.population).format('0,0')}</p>
+                <p>area : ${numeral(country.sq_km_area).format('0,0')}</p>
+                <p>life expectancy : ${numeral(country.life_expectancy).format('0,0')}%</p> 
+            </main>
+    </div>
+`
+// caseFrequency(country.confirmed,country.population)
+}
