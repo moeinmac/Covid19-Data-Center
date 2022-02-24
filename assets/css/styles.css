@@ -48,8 +48,8 @@ nav{
 }
 .toogle-mood i{
     font-size: 1.33rem;
-    padding: .3em;
-    background-color: #FFCC33;
+    padding: .38em .3em;
+    background-color: #0EB9FF;
     color: #fff;
     cursor: pointer;
     border-radius: 50%;

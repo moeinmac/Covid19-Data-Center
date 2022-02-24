@@ -8,10 +8,8 @@ API for getting Data :
 AXIOS : 
 # https://axios-http.com/
 
-Fontwesome Library : 
+FontAwesome Library : 
 # https://fontawesome.com/
 
 Numeral
 # http://numeraljs.com/
-
-Moein Ghasemi
